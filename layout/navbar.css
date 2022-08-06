@@ -132,6 +132,3 @@
   /* height: 34px; */
   display: inline-block;
 }
-[class^="navbar__mobile--icons--"]{
-  font-size: 2rem;
-}
