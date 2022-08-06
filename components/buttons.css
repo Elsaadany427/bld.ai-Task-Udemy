@@ -17,13 +17,13 @@
   font-size: 1.4rem;
 }
 .btn-secondry {
-  color: #1c1d1f;
+  color: var(--clr-primary);
   background-color: transparent;
-  border: 1px solid #1c1d1f;
+  border: 1px solid var(--clr-primary);
 }
 .btn-primary {
-  background-color: #1c1d1f;
-  color: #fff;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondry);
 }
 .btn-height {
   height: 4rem;
