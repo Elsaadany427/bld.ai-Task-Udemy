@@ -2,6 +2,7 @@
     /* main color */
     --clr-primary: #1c1d1f;
     --clr-secondry: #fff;
-
+    --clr-gray-1: rgb(169, 169, 169);
+    --clr-f7: #f7f9fa;
     --clr-spectrum: #5624d0;
 }
