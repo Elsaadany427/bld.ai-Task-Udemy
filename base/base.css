@@ -1,0 +1,22 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+a {
+  color: var(--clr-primary);
+}
+
+.flex-middle {
+  display: flex;
+  align-items: center;
+}
+.flex-space-column {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.flex-center-vert {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}

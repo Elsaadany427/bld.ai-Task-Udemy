@@ -1,0 +1,137 @@
+/*==========================================================
+========================= Navbar ===========================
+============================================================*/
+.navbar {
+  background-color: var(--clr-secondry);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  height: 7.2rem;
+  padding: 1rem;
+}
+[class^="navbar__"] {
+  margin: 0 10px;
+}
+
+/* sm down */
+@media (width <= 767px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.navbar > nav {
+  padding: 0 2.4rem;
+  position: relative;
+}
+
+/* sm down */
+@media (width <= 767px) {
+  .navbar > nav {
+    display: none;
+  }
+}
+
+.navbar__categories {
+  margin-left: 15px;
+}
+
+.navbar__search--form {
+  margin-left: 15px;
+  flex-grow: 1;
+  height: 4.8rem;
+  margin: 0 2.3rem;
+  position: relative;
+}
+
+.navbar__search--form > form,
+.navbar__search--form > form > input {
+  height: 100%;
+  border-radius: 9999px;
+}
+
+.navbar__search--form > form > input {
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--clr-primary);
+  padding: 0 50px;
+  font-size: 1.4rem;
+  background-color: var(--clr-f7);
+}
+
+.navbar__search--form > form > button {
+  margin-left: 10px;
+}
+
+.navbar__search--form > form > svg {
+  width: 20px;
+  position: absolute;
+  left: 16px;
+}
+
+/* lg down */
+@media (width <= 1199px) {
+  .navbar__udemy--business {
+    display: none;
+  }
+}
+
+/* md down */
+@media (width <= 991px) {
+  .navbar__teach-udemy {
+    display: none;
+  }
+}
+.navbar__auth--buttons > button {
+  margin: 0 3px;
+}
+.navbar__auth--buttons > button.language {
+  min-width: 4rem;
+}
+.navbar__auth--buttons > a.shopping {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.navbar__auth--buttons > button > i {
+  font-size: 1.4rem;
+}
+
+
+.navbar__mobile {
+  display: none;
+  width: 100%;
+}
+/* sm down */
+@media (width <= 767px) {
+  .navbar__mobile{
+    display: flex;
+  }
+}
+.navbar__mobile--bar {
+  cursor: pointer;
+  display: none;
+  padding: 1.2rem;
+}
+
+.navbar__mobile--bar > i {
+  font-size: 2.4rem;
+}
+/* sm down */
+@media (width <= 767px) {
+  .navbar__mobile--bar {
+    display: block;
+  }
+}
+
+.navber__logo,
+.navber__mobile--logo {
+  width: 7rem;
+  /* height: 34px; */
+  display: inline-block;
+}
+[class^="navbar__mobile--icons--"]{
+  font-size: 2rem;
+}
