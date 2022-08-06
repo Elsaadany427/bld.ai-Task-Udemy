@@ -37,7 +37,7 @@ label {
   line-height: 1.4;
 }
 p {
-  font-size: clamp(0.94rem, calc(0.92rem + 0.09vw), 1rem);
+  font-size: clamp(1.62rem, calc(1.52rem + 0.49vw), 1.95rem);
 }
 
 label {
@@ -50,14 +50,14 @@ label {
 
 /* xl */
 @media (width <= 575.98px) {
+
+  p{
+    font-size: clamp(1.35rem, calc(1.29rem + 0.32vw), 1.56rem) !important;
+  }
 }
 
 /* sm */
 @media (576px <= width <= 767.98px) {
-  h1 {
-    font-size: clamp(1.35rem, calc(1.29rem + 0.32vw), 1.56rem);
-  }
-
   h2 {
     font-size: clamp(1.13rem, calc(1.09rem + 0.19vw), 1.25rem);
   }
