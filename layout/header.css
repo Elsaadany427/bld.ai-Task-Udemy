@@ -1,17 +1,15 @@
 header {
   min-height: 35rem;
   margin: 0 auto;
-  max-width: 134rem;
   background-color: #f8f9fb;
   position: relative;
   z-index: -11;
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08); */
+  font-family: 'Playfair Display', serif;
 }
 
 .header__background {
-  /* width: 100%; */
   justify-content: flex-end;
-  height: 47rem;
 }
 .header__background > img {
     width: 57%;

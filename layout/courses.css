@@ -1,0 +1,120 @@
+/* Component Needs */
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+
+.cources-tab>input,
+.cources-tab section>div {
+    display: none;
+}
+
+.cources-tab section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.cources-tab section>div>button:hover {
+    background-color: var(--clr-gray-0);
+    transition: all 0.3s ease-in-out;
+}
+
+#course-1:checked~section .course-1,
+#course-2:checked~section .course-2,
+#course-3:checked~section .course-3 {
+    display: block;
+}
+
+.cources-tab {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cources-tab ul li label {
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    padding: 10px 10px 2px 5px;
+    border-bottom: 0;
+    color: var(--clr-gray-1);
+    font-size: 1.6rem;
+}
+
+.cources-tab section {
+    clear: both;
+}
+
+.cources-tab section div h2 {
+    color: var(--clr-primary);
+}
+
+#course-1:checked~nav .course-1 label,
+#course-2:checked~nav .course-2 label,
+#course-3:checked~nav .course-3 label {
+    color: var(--clr-primary);
+}
+
+.cources-tab section [class^="course-"] {
+    padding: 20px;
+    width: 100%;
+    border: 1px solid var(--clr-gray-1);
+    background: var(--clr-secondry);
+    line-height: 1.5em;
+    letter-spacing: 0.3px;
+    color: var(--clr-gray-2);
+    padding-left: 3rem !important;
+}
+
+.cources-tab section [class^="course-"] > p {
+    font-size: 1.4rem;
+    color: var(--clr-primary)
+}
+.cources-tab section .sub-courses {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.cources-tab section .sub-courses .sub-course {
+    max-width: 11vw;
+    min-width: 22rem;
+    margin-top: 2rem;
+    margin-right: 1.2rem;
+}
+
+
+/* sm down */
+@media (width <=767px) {
+    .cources-tab section .sub-courses .sub-course {
+        margin: auto !important;
+    }
+}
+
+.cources-tab section .sub-courses .sub-course--img {
+    border: 1px solid var(--clr-gray-2);
+}
+
+.cources-tab section .sub-courses .sub-course>h3 {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.cources-tab section .sub-courses .sub-course .stars {
+    margin-top: 1rem;
+}
+
+.cources-tab section .sub-courses .sub-course .stars--star i {
+    color: var(--clr-stars);
+}
+
+.cources-tab section .sub-courses .sub-course--price {
+    margin-top: 2rem;
+}
+
+.cources-tab section .sub-courses .sub-course--price span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+}

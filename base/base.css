@@ -26,3 +26,11 @@ a {
   align-items: center;
   justify-content: center;
 }
+.container {
+  width: 100%;
+  max-width: 140rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
+}

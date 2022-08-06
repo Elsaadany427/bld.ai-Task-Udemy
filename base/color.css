@@ -2,7 +2,10 @@
     /* main color */
     --clr-primary: #1c1d1f;
     --clr-secondry: #fff;
-    --clr-gray-1: rgb(169, 169, 169);
+    --clr-gray-0: #e0e0e0;
+    --clr-gray-1: #a9a9a9;
+    --clr-gray-2: #6e6e6e;
     --clr-f7: #f7f9fa;
     --clr-spectrum: #5624d0;
+    --clr-stars: #e59819;
 }
