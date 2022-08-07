@@ -2,16 +2,16 @@
 ========================= Navbar ===========================
 ============================================================*/
 .navbar {
-  background-color: var(--clr-secondry);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  width: 100%;
+  height: 7.2rem;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  position: relative;
-  height: 7.2rem;
-  padding: 1rem;
+  background-color: var(--clr-secondry);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.2rem 0rem;
 }
-[class^="navbar__"] {
+[class^="navbar__"]:not(:last-child) {
   margin: 0 10px;
 }
 
@@ -22,6 +22,10 @@
     align-items: center;
   }
 }
+
+/*==========================================================
+========================= Navbar in web browser ============
+============================================================*/
 
 .navbar > nav {
   padding: 0 2.4rem;
@@ -36,14 +40,14 @@
 }
 
 .navbar__categories {
-  margin-left: 15px;
+  margin-left: 2rem !important;
 }
 
 .navbar__search--form {
   margin-left: 15px;
   flex-grow: 1;
   height: 4.8rem;
-  margin: 0 2.3rem;
+  margin: 0 0.7rem;
   position: relative;
 }
 
@@ -70,6 +74,7 @@
   width: 20px;
   position: absolute;
   left: 16px;
+  fill: var(--clr-gray-1);
 }
 
 /* lg down */
@@ -87,6 +92,7 @@
 }
 .navbar__auth--buttons > button {
   margin: 0 3px;
+  font-weight: bold;
 }
 .navbar__auth--buttons > button.language {
   min-width: 4rem;
@@ -99,6 +105,9 @@
   font-size: 1.4rem;
 }
 
+/*==========================================================
+========================= Navbar in web mobile =============
+============================================================*/
 
 .navbar__mobile {
   display: none;
@@ -129,6 +138,5 @@
 .navber__logo,
 .navber__mobile--logo {
   width: 9rem;
-  /* height: 34px; */
   display: inline-block;
 }
