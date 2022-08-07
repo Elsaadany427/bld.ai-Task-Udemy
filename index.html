@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Udemy</title>
-  </head>
 
-  <body>
-    <div class="main-content-wrapper">
-      <!-- Navbar in mobile and web -->
-      <div class="navbar flex-space-column">
-        <!-- Navbar in mobile -->
-        <div class="navbar__mobile flex-center-vert">
-          <div class="navbar__mobile--bar">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-          <a href="#" class="navber__mobile--logo">
-            <img src="./assets/icons/logo-udemy.svg" alt="logo udemy" />
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Udemy</title>
+</head>
+
+<body>
+  <div class="main-content-wrapper">
+    <!-- =============================================================================================================
+           ================================= Navbar in mobile and web ================================================
+           ===========================================================================================================-->
+    <div class="navbar flex-space-column">
+      <!-- Navbar in mobile -->
+      <div class="navbar__mobile flex-center-vert">
+        <div class="navbar__mobile--bar">
+          <i class="fa-solid fa-bars"></i>
         </div>
-        <!-- Navbar in web browser -->
-        <nav class="flex-middle">
-          <a href="#" class="navber__logo">
-            <img src="./assets/icons/logo-udemy.svg" alt="logo udemy" />
-          </a>
-          <div class="navbar__categories">
+        <a href="#" class="navber__mobile--logo">
+          <img src="./assets/icons/logo-udemy.svg" alt="logo udemy" />
+        </a>
+      </div>
+      <!-- Navbar in web browser -->
+      <nav class="flex-middle">
+        <a href="#" class="navber__logo">
+          <img src="./assets/icons/logo-udemy.svg" alt="logo udemy" />
+        </a>
+        <ul class="navbar__list">
+          <li class="navbar__categories">
             <a href="#">
               <span> Categories </span>
             </a>
-          </div>
-          <div class="navbar__search--form">
+          </li>
+          <li class="navbar__search--form">
             <form class="flex-middle">
               <input type="text" placeholder="Search for anything" />
               <button class="btn btn-primary btn-height">Search</button>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path
-                  d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"
-                />
+                  d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
               </svg>
             </form>
-          </div>
-          <div class="navbar__udemy--business">
+          </li>
+          <li class="navbar__udemy--business">
             <a href="#">
               <span> Udemy Business </span>
             </a>
-          </div>
-          <div class="navbar__teach-udemy">
+          </li>
+          <li class="navbar__teach-udemy">
             <a href="#">
               <span> Teach on Udemy </span>
             </a>
-          </div>
-          <div class="navbar__auth--buttons flex-middle">
+          </li>
+          <li class="navbar__auth--buttons flex-middle">
             <a href="#" class="shopping">
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
@@ -68,593 +67,677 @@
             <button class="btn btn-secondry btn-height language">
               <i class="fa-solid fa-globe"></i>
             </button>
-          </div>
-        </nav>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- =============================================================================================================
+           ================================= Header ==================================================================
+           ===========================================================================================================-->
+    <header>
+      <div class="header__background flex-middle">
+        <img src="./assets/header/clock-png-25766.png" alt="header background" />
+      </div>
+      <div class="header__text flex-center-col">
+        <h1>New to Udemy? Lucky You</h1>
+        <p>Skills for your present (and your future). Get started with us.</p>
+      </div>
+    </header>
+
+    <!-- =============================================================================================================
+           ================================= Main content ============================================================
+           ===========================================================================================================-->
+    <main class="main-content container">
+      <!-- =============================================================================================================
+           ================================= Main content -- Heading title =============================================
+           =============================================================================================================-->
+      <div class="main-content--headtitle">
+        <h1>A broad selection of courses</h1>
+        <p>
+          Choose from 185,000 online video courses with new additions
+          published every month
+        </p>
       </div>
 
-      <header>
-        <div class="header__background flex-middle">
-          <img
-            src="./assets/header/clock-png-25766.png"
-            alt="header background"
-          />
-        </div>
-        <div class="header__text flex-center-col">
-          <h1>New to Udemy? Lucky You</h1>
-          <p>
-            Skills for your present (and your future). Get started with us.
-          </p>
-        </div>
-      </header>
+      <!-- =============================================================================================================
+           ================================= Main content -- courses ===================================================
+           =============================================================================================================-->
+      <div class="cources-tab">
+        <input checked="checked" id="course-1" type="radio" name="cources-tab" />
+        <input id="course-2" type="radio" name="cources-tab" />
+        <input id="course-3" type="radio" name="cources-tab" />
+        <nav>
+          <ul>
+            <li class="course-1">
+              <label for="course-1">Python</label>
+            </li>
+            <li class="course-2">
+              <label for="course-2">Excel</label>
+            </li>
+            <li class="course-3">
+              <label for="course-3">Web Development</label>
+            </li>
+          </ul>
+        </nav>
+        <section>
+          <div class="course-1">
+            <h2>Expand your career opportunities with Python</h2>
+            <p>
+              Take one of Udemy’s range of Python courses and learn how to
+              code using this incredibly useful language. Its simple syntax
+              and readability makes Python perfect for Flask, Django, data
+              science, and machine learning. You’ll learn how to build
+              everything from games to sites to apps. Choose from a range of
+              courses that will appeal to both beginners and advanced
+              developers alike..
+            </p>
+            <button class="btn btn-secondry btn-height">
+              Explore Python
+            </button>
 
-      <!-- Main content -->
-      <main class="main-content container">
-        
-
-        <div class="main-content--headtitle">
-          <h1>A broad selection of courses</h1>
-          <p>
-            Choose from 185,000 online video courses with new additions
-            published every month
-          </p>
-        </div>
-
-        <div class="cources-tab">
-          <input
-            checked="checked"
-            id="course-1"
-            type="radio"
-            name="cources-tab"
-          />
-          <input id="course-2" type="radio" name="cources-tab" />
-          <input id="course-3" type="radio" name="cources-tab" />
-          <nav>
-            <ul>
-              <li class="course-1">
-                <label for="course-1">Python</label>
-              </li>
-              <li class="course-2">
-                <label for="course-2">Excel</label>
-              </li>
-              <li class="course-3">
-                <label for="course-3">Web Development</label>
-              </li>
-            </ul>
-          </nav>
-          <section>
-            <div class="course-1">
-              <h2>Expand your career opportunities with Python</h2>
-              <p>
-                Take one of Udemy’s range of Python courses and learn how to
-                code using this incredibly useful language. Its simple syntax
-                and readability makes Python perfect for Flask, Django, data
-                science, and machine learning. You’ll learn how to build
-                everything from games to sites to apps. Choose from a range of
-                courses that will appeal to both beginners and advanced
-                developers alike..
-              </p>
-              <button class="btn btn-secondry btn-height">
-                Explore Python
-              </button>
-
-              <div class="sub-courses">
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/python.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+            <div class="courses">
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/python.jpg" alt="pyhon course" />
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img
-                      src="./assets/courses/python2.jpg"
-                      alt="pyhon course"
-                    />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img
-                      src="./assets/courses/python2.jpg"
-                      alt="pyhon course"
-                    />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
                     </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                    <span>(1.247)</span>
+                  </span>
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/python.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img
-                      src="./assets/courses/python2.jpg"
-                      alt="pyhon course"
-                    />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+              </div>
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/python2.jpg" alt="pyhon course" />
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/python.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
                     </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/python2.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/python.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/python2.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/python.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="course-2">
-              <h2>Analyze and visualize data with Excel</h2>
-              <p>
-                Take a Microsoft Excel course from Udemy, and learn how to use
-                this industry-standard software. Real-world experts will show
-                you the basics like how to organize data into sheets, rows and
-                columns, and advanced techniques like creating complex dynamic
-                formulas. Both small businesses and large companies use Excel to
-              </p>
-              <button class="btn btn-secondry btn-height">
-                Explore Excel
-              </button>
+          <div class="course-2">
+            <h2>Analyze and visualize data with Excel</h2>
+            <p>
+              Take a Microsoft Excel course from Udemy, and learn how to use
+              this industry-standard software. Real-world experts will show
+              you the basics like how to organize data into sheets, rows and
+              columns, and advanced techniques like creating complex dynamic
+              formulas. Both small businesses and large companies use Excel to
+            </p>
+            <button class="btn btn-secondry btn-height">Explore Excel</button>
 
-              <div class="sub-courses">
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/excel.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+            <div class="courses">
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/excel.jpg" alt="pyhon course" />
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/excel2.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/excel2.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
                     </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                    <span>(1.247)</span>
+                  </span>
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/excel.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/excel2.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+              </div>
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/excel2.jpg" alt="pyhon course" />
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/excel.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
                     </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/excel2.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/excel.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/excel2.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/excel.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="course-3">
-              <h2>Build websites and applications with Web Development</h2>
-              <p>
-                The world of web development is as wide as the internet itself.
-                Much of our social and vocational lives play out on the
-                internet, which prompts new industries aimed at creating,
-                managing, and debugging the websites and applications that we
-                increasingly rely on.
-              </p>
-              <button class="btn btn-secondry btn-height">
-                Explore Web Development
-              </button>
+          <div class="course-3">
+            <h2>Build websites and applications with Web Development</h2>
+            <p>
+              The world of web development is as wide as the internet itself.
+              Much of our social and vocational lives play out on the
+              internet, which prompts new industries aimed at creating,
+              managing, and debugging the websites and applications that we
+              increasingly rely on.
+            </p>
+            <button class="btn btn-secondry btn-height">
+              Explore Web Development
+            </button>
 
-              <div class="sub-courses">
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/web2.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+            <div class="courses">
+
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/web2.jpg" alt="pyhon course" />
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/web1.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/web2.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
                     </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                    <span>(1.247)</span>
+                  </span>
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/web1.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/web2.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
-                    </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+              </div>
+
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/web1.jpg" alt="pyhon course" />
                 </div>
-                <div class="sub-course">
-                  <div class="sub-course--img">
-                    <img src="./assets/courses/web1.jpg" alt="pyhon course" />
-                  </div>
-                  <h3>
-                    <a href="#">
-                      Learn Python: The Complete Python Programming Course
-                    </a>
-                  </h3>
-                  <div>
-                    <span> Avinash Jain, The Codex </span>
-                  </div>
-                  <div class="stars">
-                    <span>
-                      <span>4.4</span>
-                      <span class="stars--star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                      <span>(1.247)</span>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
                     </span>
-                  </div>
-                  <div class="sub-course--price"><span> E£679.99 </span></div>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/web2.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/web1.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/web2.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
+                </div>
+              </div>
+
+              <!-- ==================================================================================================
+                   ======================= Main content -- courses -- course card ===================================
+                   ===================================================================================================-->
+              <div class="courses__card">
+                <div class="courses__card--img">
+                  <img src="./assets/courses/web1.jpg" alt="pyhon course" />
+                </div>
+                <h3>
+                  <a href="#">
+                    Learn Python: The Complete Python Programming Course
+                  </a>
+                </h3>
+                <div>
+                  <span> Avinash Jain, The Codex </span>
+                </div>
+                <div class="stars">
+                  <span>
+                    <span>4.4</span>
+                    <span class="stars--star">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span>(1.247)</span>
+                  </span>
+                </div>
+                <div class="courses__card--price">
+                  <span> E£679.99 </span>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-      </main>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
 
-    </div>
-  </body>
 </html>
