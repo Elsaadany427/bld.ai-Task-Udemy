@@ -25,7 +25,8 @@ h3 {
   font-size: clamp(1.62rem, calc(1.52rem + 0.49vw), 1.95rem);
 }
 span{
-  font-size:  clamp(1.13rem, calc(1.09rem + 0.19vw), 1.25rem);
+  /* font-size:  clamp(1.13rem, calc(1.09rem + 0.19vw), 1.25rem); */
+  font-size: clamp(1.33rem, calc(1.09rem + 0.09vw), 2rem);
 }
 p,
 label {
