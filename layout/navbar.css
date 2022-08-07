@@ -39,6 +39,12 @@
   }
 }
 
+.navbar__list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
 .navbar__categories {
   margin-left: 2rem !important;
 }
@@ -115,7 +121,7 @@
 }
 /* sm down */
 @media (width <= 767px) {
-  .navbar__mobile{
+  .navbar__mobile {
     display: flex;
   }
 }
