@@ -72,7 +72,7 @@
   grid-row-gap: 6px;
 }
 /* xxs down */
-@media (width <= 380px) {
+@media only screen and (max-width: 380px) {
   .courses {
     display: block;
   }

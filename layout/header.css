@@ -9,13 +9,13 @@ header {
   justify-content: flex-end;
   display: flex;
 }
-@media (width >= 1199px) {
+@media only screen and (min-width : 1199px) {
   header {
     max-width: 140rem;
   }
 }
 /* xs down */
-@media (width <= 767px) {
+@media only screen and (max-width : 767px) {
   header {
     padding: 1rem 0 0 0;
     display: flex;
@@ -44,7 +44,7 @@ header {
 }
 
 /* md && lg */
-@media (767px <= width <= 1199.98px) {
+@media (min-width:767px) and (max-width: 1199.98px){
   .header__text {
     width: 30rem;
   }
@@ -54,7 +54,7 @@ header {
 }
 
 /* sm down */
-@media (width <= 767px) {
+@media only screen and (max-width : 767px) {
   .header__text {
     position: static;
     width: 100%;
@@ -71,7 +71,7 @@ header {
 }
 
 /* xs down */
-@media (width <= 575px) {
+@media only screen and (max-width : 575px) {
   .header__background {
     width: 45%;
   }
