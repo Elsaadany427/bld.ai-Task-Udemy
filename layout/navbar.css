@@ -16,7 +16,7 @@
 }
 
 /* sm down */
-@media (width <= 767px) {
+@media (max-width : 767px) {
   .navbar {
     flex-direction: row;
     align-items: center;
@@ -33,7 +33,7 @@
 }
 
 /* sm down */
-@media (width <= 767px) {
+@media (max-width : 767px) {
   .navbar > nav {
     display: none;
   }
@@ -84,14 +84,14 @@
 }
 
 /* lg down */
-@media (width <= 1199px) {
+@media (max-width : 1199px) {
   .navbar__udemy--business {
     display: none;
   }
 }
 
 /* md down */
-@media (width <= 991px) {
+@media (max-width : 991px) {
   .navbar__teach-udemy {
     display: none;
   }
@@ -120,7 +120,7 @@
   width: 100%;
 }
 /* sm down */
-@media (width <= 767px) {
+@media (max-width : 767px) {
   .navbar__mobile {
     display: flex;
   }
@@ -135,7 +135,7 @@
   font-size: 2.4rem;
 }
 /* sm down */
-@media (width <= 767px) {
+@media (max-width : 767px) {
   .navbar__mobile--bar {
     display: block;
   }
