@@ -23,33 +23,33 @@
   }
 }
 
-/*==========================================================
-========================= Navbar in web browser ============
-============================================================*/
+/*====================================================================================================
+========================= Navbar in content browser ==================================================
+======================================================================================================*/
 
-.navbar > nav {
+.navbar > .navbar__web-content {
   padding: 0 2.4rem;
   position: relative;
 }
 
 /* sm down */
 @media (max-width : 767px) {
-  .navbar > nav {
+  .navbar >  .navbar__web-content {
     display: none;
   }
 }
 
-.navbar__list {
+.navber > .navbar__web-content > .navbar__list {
   width: 100%;
   display: flex;
   align-items: center;
 }
 
-.navbar__categories {
+.navbar > .navbar__web-content > .navbar__categories {
   margin-left: 2rem !important;
 }
 
-.navbar__search--form {
+.navber > .navbar__web-content > .navbar__search-form {
   margin-left: 15px;
   flex-grow: 1;
   height: 4.8rem;
@@ -57,13 +57,13 @@
   position: relative;
 }
 
-.navbar__search--form > form,
-.navbar__search--form > form > input {
+.navber > .navbar__web-content > .navbar__search-form > form,
+.navber > .navbar__web-content > .navbar__search-form > form > input {
   height: 100%;
   border-radius: 9999px;
 }
 
-.navbar__search--form > form > input {
+.navber > .navbar__web-content > .navbar__search-form > form > input {
   width: 100%;
   outline: none;
   border: 1px solid var(--clr-primary);
@@ -72,11 +72,11 @@
   background-color: var(--clr-f7);
 }
 
-.navbar__search--form > form > button {
+.navber > .navbar__web-content > .navbar__search-form > form > button {
   margin-left: 10px;
 }
 
-.navbar__search--form > form > svg {
+.navber > .navbar__web-content > .navbar__search-form > form > svg {
   width: 20px;
   position: absolute;
   left: 16px;
@@ -85,34 +85,34 @@
 
 /* lg down */
 @media (max-width : 1199px) {
-  .navbar__udemy--business {
+  .navber > .navbar__web-content > .navbar__udemy-business {
     display: none;
   }
 }
 
 /* md down */
 @media (max-width : 991px) {
-  .navbar__teach-udemy {
+  .navber > .navbar__web-content > .navbar__teach-udemy {
     display: none;
   }
 }
-.navbar__auth--buttons > button {
+.navber > .navbar__web-content > .navbar__auth-buttons > button {
   margin: 0 3px;
   font-weight: bold;
 }
-.navbar__auth--buttons > button.language {
+.navber > .navbar__web-content > .navbar__auth-buttons > .navbar__btn--language {
   min-width: 4rem;
 }
-.navbar__auth--buttons > a.shopping {
+.navber > .navbar__web-content > .navbar__auth-buttons > .navbar__btn--shopping{
   font-size: 2rem;
   margin-right: 1rem;
 }
-.navbar__auth--buttons > button > i {
+.navber > .navbar__web-content > .navbar__auth-buttons > button > i {
   font-size: 1.4rem;
 }
 
 /*==========================================================
-========================= Navbar in web mobile =============
+========================= Navbar in content mobile =============
 ============================================================*/
 
 .navbar__mobile {
@@ -125,24 +125,23 @@
     display: flex;
   }
 }
-.navbar__mobile--bar {
+.navbar > .navbar__mobile > .navbar__bar-icon {
   cursor: pointer;
   display: none;
   padding: 1.2rem;
 }
 
-.navbar__mobile--bar > i {
+.navbar > .navbar__mobile > .navbar__bar-icon > i {
   font-size: 2.4rem;
 }
 /* sm down */
 @media (max-width : 767px) {
-  .navbar__mobile--bar {
+  .navbar > .navbar__mobile > .navbar__bar-icon--icon-size-sm {
     display: block;
   }
 }
 
-.navber__logo,
-.navber__mobile--logo {
+.navbar__logo{
   width: 9rem;
   display: inline-block;
 }
