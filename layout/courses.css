@@ -92,19 +92,19 @@
   margin-top: 1rem;
 }
 
-.cources-tab section .main-content__course-cards .main-content__course-card .main-content__card-stars-container {
+.main-content__cources-tab section .main-content__course-cards .main-content__course-card .main-content__card-stars-container {
   margin-top: 1rem;
 }
 
-.cources-tab section .main-content__course-cards .main-content__course-card .main-content__card-stars i {
+.main-content__cources-tab section .main-content__course-cards .main-content__course-card .main-content__card-stars i {
   color: var(--clr-main-content__card-stars-container);
 }
 
-.cources-tab section .main-content__course-cards .main-content__card-price {
+.main-content__cources-tab section .main-content__course-cards .main-content__card-price {
   margin-top: 2rem;
 }
 
-.cources-tab section .main-content__course-cards .main-content__card-price span {
+.main-content__cources-tab section .main-content__course-cards .main-content__card-price span {
   font-weight: bold;
   font-size: 1.5rem;
   color: var(--clr-primary);
