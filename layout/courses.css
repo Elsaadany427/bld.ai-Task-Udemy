@@ -1,3 +1,8 @@
+/* Global style */
+.fa-gray{
+  color: var(--clr-gray-0) !important;
+}
+
 .main-content__cources-tab > input,
 .main-content__cources-tab section > div {
   display: none;
@@ -40,7 +45,7 @@
   clear: both;
 }
 
-.main-content__cources-tab section div h2 {
+.main-content__cources-tab section div div h2 {
   color: var(--clr-primary);
 }
 
@@ -61,7 +66,7 @@
   padding-left: 3rem !important;
 }
 
-.main-content__cources-tab section [class^="main-content__course-container-"] > p {
+.main-content__cources-tab section [class^="main-content__course-container-"] div p {
   font-size: 1.4rem;
   color: var(--clr-primary);
 }
@@ -102,6 +107,7 @@
 
 .main-content__course-cards .main-content__course-card .main-content__card-stars i {
   color: var(--clr-main-content__card-stars-container);
+  margin: 2px;
 }
 
 .main-content__course-cards .main-content__course-card .main-content__card-price {
