@@ -1,0 +1,174 @@
+{
+    "courses": [
+        {
+            "python": [
+                {
+                    "id": 1,
+                    "image": "assets/courses/python.jpg",
+                    "title": " Learn Python: The Complete Python Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 2,
+                    "image": "assets/courses/python2.jpg",
+                    "title": " Learn Python: The Complete Python Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 3,
+                    "image": "assets/courses/python.jpg",
+                    "title": " Learn Python: The Complete Python Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 4,
+                    "image": "assets/courses/python2.jpg",
+                    "title": " Learn Python: The Complete Python Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 5,
+                    "image": "assets/courses/python.jpg",
+                    "title": " Learn Python: The Complete Python Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 6,
+                    "image": "assets/courses/python2.jpg",
+                    "title": " Learn Python: The Complete Python Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                }
+            ],
+            "excel": [
+                {
+                    "id": 1,
+                    "image": "assets/courses/excel.jpg",
+                    "title": " Learn Excel: The Complete Excel Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 2,
+                    "image": "assets/courses/excel2.jpg",
+                    "title": " Learn Excel: The Complete Excel Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 3,
+                    "image": "assets/courses/excel.jpg",
+                    "title": " Learn Excel: The Complete Excel Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 4,
+                    "image": "assets/courses/excel2.jpg",
+                    "title": " Learn Excel: The Complete Excel Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 5,
+                    "image": "assets/courses/excel.jpg",
+                    "title": " Learn Excel: The Complete Excel Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 6,
+                    "image": "assets/courses/excel2.jpg",
+                    "title": " Learn Excel: The Complete Excel Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                }
+            ],
+            "web-development": [
+                {
+                    "id": 1,
+                    "image": "assets/courses/excel.jpg",
+                    "title": " Learn Web Development: The Complete Web Development Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 2,
+                    "image": "assets/courses/excel2.jpg",
+                    "title": " Learn Web Development: The Complete Web Development Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 3,
+                    "image": "assets/courses/excel.jpg",
+                    "title": " Learn Web Development: The Complete Web Development Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 4,
+                    "image": "assets/courses/excel2.jpg",
+                    "title": " Learn Web Development: The Complete Web Development Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 5,
+                    "image": "assets/courses/excel.jpg",
+                    "title": " Learn Web Development: The Complete Web Development Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                },
+                {
+                    "id": 6,
+                    "image": "assets/courses/excel2.jpg",
+                    "title": " Learn Web Development: The Complete Web Development Programming Course",
+                    "author": "Avinash Jain, The Codex",
+                    "star-rate": 4.4,
+                    "rate-num": 1.247,
+                    "price": 679.99
+                }
+            ]
+        }
+    ]
+}
