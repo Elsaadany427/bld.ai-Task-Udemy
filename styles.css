@@ -13,7 +13,7 @@
   ========================================================*/
   @import "./layout/index.css";
 
-.main-content--headtitle{
+.main-content__head-title{
   margin-top: 5rem;
   font-family: 'Playfair Display', serif;
 }

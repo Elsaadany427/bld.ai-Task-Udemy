@@ -1,32 +1,32 @@
-.cources-tab > input,
-.cources-tab section > div {
+.main-content__cources-tab > input,
+.main-content__cources-tab section > div {
   display: none;
 }
 
-.cources-tab section {
+.main-content__cources-tab section {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-.cources-tab section > div > button:hover {
+.main-content__cources-tab section > div > button:hover {
   background-color: var(--clr-gray-0);
   transition: all 0.3s ease-in-out;
 }
 
-#course-1:checked ~ section .course-1,
-#course-2:checked ~ section .course-2,
-#course-3:checked ~ section .course-3 {
+#course-1:checked ~ section .main-content__course-container-1,
+#course-2:checked ~ section .main-content__course-container-2,
+#course-3:checked ~ section .main-content__course-container-3 {
   display: block;
 }
 
-.cources-tab {
+.main-content__cources-tab {
   width: 100%;
   margin: 0 auto;
 }
 
-.cources-tab ul li label {
+.main-content__cources-tab ul li label {
   font-weight: bold;
   cursor: pointer;
   float: left;
@@ -36,21 +36,21 @@
   font-size: 1.6rem;
 }
 
-.cources-tab section {
+.main-content__cources-tab section {
   clear: both;
 }
 
-.cources-tab section div h2 {
+.main-content__cources-tab section div h2 {
   color: var(--clr-primary);
 }
 
-#course-1:checked ~ nav .course-1 label,
-#course-2:checked ~ nav .course-2 label,
-#course-3:checked ~ nav .course-3 label {
+#course-1:checked ~ nav .main-content__course-1 label,
+#course-2:checked ~ nav .main-content__course-2 label,
+#course-3:checked ~ nav .main-content__course-3 label {
   color: var(--clr-primary);
 }
 
-.cources-tab section [class^="course-"] {
+.main-content__cources-tab section [class^="main-content__course-container-"] {
   padding: 20px;
   width: 100%;
   border: 1px solid var(--clr-gray-1);
@@ -61,11 +61,11 @@
   padding-left: 3rem !important;
 }
 
-.cources-tab section [class^="course-"] > p {
+.main-content__cources-tab section [class^="main-content__course-container-"] > p {
   font-size: 1.4rem;
   color: var(--clr-primary);
 }
-.courses {
+.main-content__course-cards{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-column-gap: 6px;
@@ -73,38 +73,38 @@
 }
 /* xxs down */
 @media only screen and (max-width: 380px) {
-  .courses {
+  .main-content__course-cards{
     display: block;
   }
 }
-.courses .courses__card {
+.main-content__course-cards .main-content__course-card {
   border-radius: 5px;
   padding: 20px;
   margin-top: 2rem;
 }
 
-.cources-tab section .courses .courses__card--img {
+.main-content__cources-tab section .main-content__course-cards .main-content__card-img {
   border: 1px solid var(--clr-gray-2);
 }
 
-.cources-tab section .courses .courses__card > h3 {
+.main-content__cources-tab section .main-content__course-cards .main-content__course-card > h3 {
   font-size: 1.6rem;
   margin-top: 1rem;
 }
 
-.cources-tab section .courses .courses__card .stars {
+.cources-tab section .main-content__course-cards .main-content__course-card .main-content__card-stars-container {
   margin-top: 1rem;
 }
 
-.cources-tab section .courses .courses__card .stars--star i {
-  color: var(--clr-stars);
+.cources-tab section .main-content__course-cards .main-content__course-card .main-content__card-stars i {
+  color: var(--clr-main-content__card-stars-container);
 }
 
-.cources-tab section .courses .courses__card--price {
+.cources-tab section .main-content__course-cards .main-content__card-price {
   margin-top: 2rem;
 }
 
-.cources-tab section .courses .courses__card--price span {
+.cources-tab section .main-content__course-cards .main-content__card-price span {
   font-weight: bold;
   font-size: 1.5rem;
   color: var(--clr-primary);
