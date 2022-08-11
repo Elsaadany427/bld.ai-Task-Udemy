@@ -77,34 +77,38 @@
     display: block;
   }
 }
+
+/*=================================================
+=========== Cards css =============================
+===================================================*/
 .main-content__course-cards .main-content__course-card {
   border-radius: 5px;
   padding: 20px;
   margin-top: 2rem;
 }
 
-.main-content__cources-tab section .main-content__course-cards .main-content__card-img {
+.main-content__course-cards .main-content__course-card .main-content__card-img {
   border: 1px solid var(--clr-gray-2);
 }
 
-.main-content__cources-tab section .main-content__course-cards .main-content__course-card > h3 {
+.main-content__course-cards .main-content__course-card > h3 {
   font-size: 1.6rem;
   margin-top: 1rem;
 }
 
-.main-content__cources-tab section .main-content__course-cards .main-content__course-card .main-content__card-stars-container {
+.main-content__course-cards .main-content__course-card .main-content__card-stars-container {
   margin-top: 1rem;
 }
 
-.main-content__cources-tab section .main-content__course-cards .main-content__course-card .main-content__card-stars i {
+.main-content__course-cards .main-content__course-card .main-content__card-stars i {
   color: var(--clr-main-content__card-stars-container);
 }
 
-.main-content__cources-tab section .main-content__course-cards .main-content__card-price {
+.main-content__course-cards .main-content__course-card .main-content__card-price {
   margin-top: 2rem;
 }
 
-.main-content__cources-tab section .main-content__course-cards .main-content__card-price span {
+.main-content__course-cards .main-content__course-card .main-content__card-price span {
   font-weight: bold;
   font-size: 1.5rem;
   color: var(--clr-primary);
