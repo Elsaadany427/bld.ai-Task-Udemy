@@ -64,7 +64,7 @@ label {
 /* sm */
 @media (min-width: 576px) and (max-width: 767.98px) {
   h2 {
-    font-size: clamp(1.13rem, calc(1.09rem + 0.19vw), 1.25rem);
+    font-size: clamp(1.94rem, calc(1.8rem + 0.74vw), 2.44rem);  
   }
 
   h3 {
@@ -79,7 +79,7 @@ label {
   }
 
   h2 {
-    font-size: clamp(1.35rem, calc(1.29rem + 0.32vw), 1.56rem);
+    font-size: clamp(1.94rem, calc(1.8rem + 0.74vw), 2.44rem);
   }
 
   h3 {

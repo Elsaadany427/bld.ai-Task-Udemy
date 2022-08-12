@@ -48,7 +48,7 @@
       "starRate": 4.4,
       "students": 1.247,
       "price": 679.99,
-      "category": "python"
+      "category": "excel"
     },
     {
       "id": 6,
@@ -58,7 +58,67 @@
       "starRate": 4.4,
       "students": 1.247,
       "price": 679.99,
+      "category": "excel"
+    },
+    {
+      "id": 1,
+      "image": "assets/courses/python.jpg",
+      "title": " Learn Python: The Complete Python Programming Course",
+      "author": "Avinash Jain, The Codex",
+      "starRate": 2.4,
+      "students": 1.247,
+      "price": 679.99,
       "category": "python"
+    },
+    {
+      "id": 2,
+      "image": "assets/courses/python2.jpg",
+      "title": " Learn Python: The Complete Python Programming Course",
+      "author": "Avinash Jain, The Codex",
+      "starRate": 1.4,
+      "students": 1.247,
+      "price": 679.99,
+      "category": "python"
+    },
+    {
+      "id": 3,
+      "image": "assets/courses/python.jpg",
+      "title": " Learn Python: The Complete Python Programming Course",
+      "author": "Avinash Jain, The Codex",
+      "starRate": 4.4,
+      "students": 1.247,
+      "price": 679.99,
+      "category": "python"
+    },
+    {
+      "id": 4,
+      "image": "assets/courses/python2.jpg",
+      "title": " Learn Python: The Complete Python Programming Course",
+      "author": "Avinash Jain, The Codex",
+      "starRate": 4.4,
+      "students": 1.247,
+      "price": 679.99,
+      "category": "python"
+    },
+    {
+      "id": 5,
+      "image": "assets/courses/python.jpg",
+      "title": " Learn Python: The Complete Python Programming Course",
+      "author": "Avinash Jain, The Codex",
+      "starRate": 4.4,
+      "students": 1.247,
+      "price": 679.99,
+      "category": "excel"
+    },
+    {
+      "id": 6,
+      "image": "assets/courses/python2.jpg",
+      "title": " Learn Python: The Complete Python Programming Course",
+      "author": "Avinash Jain, The Codex",
+      "starRate": 4.4,
+      "students": 1.247,
+      "price": 679.99,
+      "category": "excel"
     }
   ],
   "tabs": {
@@ -70,5 +130,6 @@
       "opportunities": "Expand your career opportunities with Excel",
       "desc": "Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from games to sites to apps. Choose from a range of courses that will appeal to both beginners and advanced developers alike.."
     }
-  }
+  },
+  "categories": ["python", "excel"]
 }
