@@ -43,7 +43,7 @@
     {
       "id": 5,
       "image": "assets/courses/excel2.jpg",
-      "title": " Learn Excel: The Complete Excel Programming Course",
+      "title": " Learn Excel1: The Complete Excel Programming Course",
       "auther": "Avinash Jain, The Codex",
       "starRate": 4.4,
       "students": 1.247,
@@ -53,7 +53,7 @@
     {
       "id": 6,
       "image": "assets/courses/excel2.jpg",
-      "title": " Learn Excel: The Complete Excel Programming Course",
+      "title": " Learn Excel2: The Complete Excel Programming Course",
       "auther": "Avinash Jain, The Codex",
       "starRate": 4.4,
       "students": 1.247,
@@ -103,7 +103,7 @@
     {
       "id": 5,
       "image": "assets/courses/excel.jpg",
-      "title": " Learn Excel: The Complete Excel Programming Course",
+      "title": " Learn Excel3: The Complete Excel Programming Course",
       "auther": "Avinash Jain, The Codex",
       "starRate": 4.4,
       "students": 1.247,
@@ -113,7 +113,7 @@
     {
       "id": 6,
       "image": "assets/courses/excel2.jpg",
-      "title": " Learn Excel: The Complete Excel Programming Course",
+      "title": " Learn Excel4: The Complete Excel Programming Course",
       "auther": "Avinash Jain, The Codex",
       "starRate": 4.4,
       "students": 1.247,

@@ -20,15 +20,14 @@ function handlingSearchBtn(event) {
 function handlingCourses() {
     const inputValue = courseNavsearchFormInput?.value?.trim()?.toLowerCase();
 
-    const coursesCardsDiv = Array.of(
-        document.querySelector(".main-content__course-cards")
-    );
-
-    coursesCardsDiv.forEach((card) => {
+    const coursesCards = document.querySelectorAll(".main-content__course-card")
+    
+    coursesCards.forEach((card) => {
         card.style.display = "grid";
         const courseCardTitle = card.querySelector("a").innerHTML.toLowerCase();
         const matched = courseCardTitle.includes(inputValue);
-        if (!matched) card.style.display = "none";
+        if (!matched) 
+            card.style.display = "none"
     });
 }
 
