@@ -42,8 +42,8 @@
     },
     {
       "id": 5,
-      "image": "assets/courses/python.jpg",
-      "title": " Learn Python: The Complete Python Programming Course",
+      "image": "assets/courses/excel2.jpg",
+      "title": " Learn Excel: The Complete Excel Programming Course",
       "auther": "Avinash Jain, The Codex",
       "starRate": 4.4,
       "students": 1.247,
@@ -52,8 +52,8 @@
     },
     {
       "id": 6,
-      "image": "assets/courses/python2.jpg",
-      "title": " Learn Python: The Complete Python Programming Course",
+      "image": "assets/courses/excel2.jpg",
+      "title": " Learn Excel: The Complete Excel Programming Course",
       "auther": "Avinash Jain, The Codex",
       "starRate": 4.4,
       "students": 1.247,
@@ -102,8 +102,8 @@
     },
     {
       "id": 5,
-      "image": "assets/courses/python.jpg",
-      "title": " Learn Python: The Complete Python Programming Course",
+      "image": "assets/courses/excel.jpg",
+      "title": " Learn Excel: The Complete Excel Programming Course",
       "auther": "Avinash Jain, The Codex",
       "starRate": 4.4,
       "students": 1.247,
@@ -112,8 +112,8 @@
     },
     {
       "id": 6,
-      "image": "assets/courses/python2.jpg",
-      "title": " Learn Python: The Complete Python Programming Course",
+      "image": "assets/courses/excel2.jpg",
+      "title": " Learn Excel: The Complete Excel Programming Course",
       "auther": "Avinash Jain, The Codex",
       "starRate": 4.4,
       "students": 1.247,
