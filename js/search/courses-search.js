@@ -36,3 +36,4 @@ courseNavsearchFormButton.addEventListener("click", handlingSearchBtn, false);
 
 // Handling courses cards when input is empty
 courseNavsearchFormInput.addEventListener("keyup", handlingEmptyInput, false);
+
