@@ -30,6 +30,7 @@ function createTabs(tabName) {
   li.classList.add("main-content__cources-item");
 
   const a = document.createElement("a");
+  // replace space with dash web development -> web-development 
   a.href = `#${tabName.replace(/\s+/g, '-').toLowerCase()}`;
   a.innerHTML = tabName;
 
@@ -52,7 +53,8 @@ element.addEventListener(
   false
 );
 
-/**
+/** 
+ * Main function
  * Function used to create content based on tab needed
  * @param {*} tapName
  */
@@ -83,7 +85,8 @@ async function onTabClickOrDefaultTab(tapName) {
 
   courseContainer.prepend(
     createCourseDesc(
-      tapName.href.split("#")[1],
+      // replace will make web-development -> web development
+      tapName.href.split("#")[1].replace('-' , ' ' ).toLowerCase(),
       tabsData[tapName.href.split("#")[1].replace('-' , ' ' ).toLowerCase()].opportunities,
       tabsData[tapName.href.split("#")[1].replace('-' , ' ').toLowerCase()].desc
     )
@@ -307,6 +310,12 @@ function createStars(starRate, students) {
   return starsContainerDiv;
 }
 
+/**
+ * Function that create Carousel
+ * @param {Courses arrary that needed to create carousel over it} coursesArray 
+ * @param {courses size} courseSize 
+ * @returns row div with carousel items
+ */
 function createCarousel(coursesArray, courseSize) {
   const row = document.createElement("div");
   row.classList.add("row");
