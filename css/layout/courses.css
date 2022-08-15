@@ -18,7 +18,7 @@
   flex-wrap: wrap;
 }
 
-.main-content__cources-tab section > div > button:hover {
+.main-content__cources-tab section>div>button:hover {
   background-color: var(--clr-gray-0);
   transition: all 0.3s ease-in-out;
 }
@@ -31,6 +31,7 @@
 .main-content__cources-tab ul li.active a {
   color: var(--clr-primary);
 }
+
 .main-content__cources-tab ul li a {
   font-weight: bold;
   cursor: pointer;
@@ -40,7 +41,7 @@
   color: var(--clr-gray-1);
   font-size: 1.6rem;
   text-transform: capitalize;
-  margin-bottom: 1.6rem;
+  margin-bottom: .6rem;
 }
 
 .main-content__cources-tab section {
@@ -68,20 +69,12 @@
   padding-left: 3rem !important;
 }
 
-.main-content__cources-tab
-  section
-  [class^="main-content__course-container"]
-  div
-  p {
+.main-content__cources-tab section [class^="main-content__course-container"] div p {
   font-size: 1.4rem;
   color: var(--clr-primary);
 }
-.main-content__course-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-column-gap: 6px;
-  grid-row-gap: 6px;
-}
+
+
 /* xxs down */
 @media only screen and (max-width: 380px) {
   .main-content__course-cards {
@@ -102,36 +95,67 @@
   border: 1px solid var(--clr-gray-2);
 }
 
-.main-content__course-cards .main-content__course-card > h3 {
+.main-content__course-cards .main-content__course-card>h3 {
   font-size: 1.6rem;
   margin-top: 1rem;
 }
 
-.main-content__course-cards
-  .main-content__course-card
-  .main-content__card-stars-container {
+.main-content__course-cards .main-content__course-card .main-content__card-stars-container {
   margin-top: 1rem;
 }
 
-.main-content__course-cards
-  .main-content__course-card
-  .main-content__card-stars
-  i {
+.main-content__course-cards .main-content__course-card .main-content__card-stars i {
   color: var(--clr-main-content__card-stars-container);
   margin: 2px;
 }
 
-.main-content__course-cards
-  .main-content__course-card
-  .main-content__card-price {
+.main-content__course-cards .main-content__course-card .main-content__card-price {
   margin-top: 2rem;
 }
 
-.main-content__course-cards
-  .main-content__course-card
-  .main-content__card-price
-  span {
+.main-content__course-cards .main-content__course-card .main-content__card-price span {
   font-weight: bold;
   font-size: 1.5rem;
   color: var(--clr-primary);
+}
+
+.main-content__course-cards .carousel {
+  position: relative;
+}
+
+.main-content__course-cards .controls .btn-floating {
+  position: absolute;
+  top:  93.6833px;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--clr-secondry);
+  text-align: center;
+  background: 0 0;
+  border: 0;
+  opacity: 1;
+  background-color: var(--clr-primary);
+  padding: 0 1.2rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+}
+
+.main-content__course-cards .controls .btn-floating:hover{
+  background-color: var(--clr-btn-hover-dark) !important;
+}
+
+.main-content__course-cards .controls .btn-floating.next {
+  left: -4px;
+}
+
+
+.main-content__course-cards .controls .btn-floating.prev {
+  right: -5px;
+}
+.main-content__course-cards .controls .btn-floating i{
+  font-size: 2rem;
 }

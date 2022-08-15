@@ -22,7 +22,7 @@ a {
   align-items: center;
   justify-content: center;
 }
-.container {
+.custom-container {
   width: 100%;
   max-width: 140rem;
   margin-right: auto;

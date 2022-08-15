@@ -15,5 +15,10 @@
 
 .main-content__head-title{
   margin-top: 5rem;
+}
+.main-content__head-title h1 {
   font-family: 'Playfair Display', serif;
+}
+.main-content__head-title p {
+  margin-bottom: 5px !important;
 }

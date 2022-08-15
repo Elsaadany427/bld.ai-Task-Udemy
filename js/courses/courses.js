@@ -51,12 +51,11 @@ element.addEventListener(
   false
 );
 
-
 /**
  * Function used to create content based on tab needed
- * @param {*} tapName 
+ * @param {*} tapName
  */
- async function onTabClickOrDefaultTab(tapName) {
+async function onTabClickOrDefaultTab(tapName) {
   const coursesArray = Array.from(await coursesApi.loadCourses());
 
   if (courseSection.children.length == 0) {
@@ -89,11 +88,19 @@ element.addEventListener(
       tabsData[tapName.href.split("#")[1]].desc
     )
   );
+  let coursesSize = 0;
   coursesArray.forEach((course) => {
     if (course.category === tapName.href.split("#")[1]) {
-      courseCards.appendChild(createCards(course));
+      coursesSize++;
     }
   });
+  const relatedCourses = [];
+  coursesArray.forEach((course) => {
+    if (course.category === tapName.href.split("#")[1]) {
+      relatedCourses.push(course);
+    }
+  });
+  courseCards.appendChild(createCarousel(relatedCourses, coursesSize));
 }
 
 /**
@@ -110,6 +117,7 @@ function createCourseContainer(categoryName) {
 
   const courseCards = document.createElement("div");
   courseCards.classList.add("main-content__course-cards");
+  courseCards.classList.add("container");
 
   courseParentDiv.appendChild(courseCards);
   courseSection.appendChild(courseParentDiv);
@@ -117,7 +125,7 @@ function createCourseContainer(categoryName) {
 
 /**
  * Creating Card
- * Function that create card it take object 
+ * Function that create card it take object
  * @param {image, title, auther, starRate, students, price } courseObject
  * @return Card Div
  */
@@ -222,7 +230,7 @@ function createCourseDesc(name, opportunities, desc) {
  */
 function createStars(starRate, students) {
   const totalStars = 5;
-  // if rate is 4.4 it will take the integer 4 
+  // if rate is 4.4 it will take the integer 4
   const currRateAsInteger = parseInt((starRate / 10) * 10);
 
   // create star container div
@@ -237,7 +245,7 @@ function createStars(starRate, students) {
   // fill all integer star with gold color
   for (let i = 0; i < currRateAsInteger; i++) {
     const starIcon = document.createElement("i");
-    const classes = ["fa-solid","fa-star"];
+    const classes = ["fa-solid", "fa-star"];
     starIcon.classList.add(...classes);
     starIconsSpan.append(starIcon);
   }
@@ -245,18 +253,18 @@ function createStars(starRate, students) {
   // fill the half star
   if (starRate - currRateAsInteger > 0) {
     const halfStarIcon = document.createElement("i");
-    const classes = ["fa-solid","fa-star-half-stroke"];
+    const classes = ["fa-solid", "fa-star-half-stroke"];
     halfStarIcon.classList.add(...classes);
     starIconsSpan.append(halfStarIcon);
   }
 
-  // fill unFill star with gray color 
+  // fill unFill star with gray color
   const unFillStar = parseInt(((totalStars - starRate) / 10) * 10);
-  
+
   for (let i = 0; i < unFillStar; i++) {
     // create icon star
     const starIcon = document.createElement("i");
-    const classes = ["fa-solid","fa-star", "fa-gray"];
+    const classes = ["fa-solid", "fa-star", "fa-gray"];
     starIcon.classList.add(...classes);
     starIconsSpan.append(starIcon);
   }
@@ -272,11 +280,106 @@ function createStars(starRate, students) {
   return starsContainerDiv;
 }
 
+function createCarousel(coursesArray, courseSize) {
+  // Carousel Wrapper
+  const carouselWrapperDiv = document.createElement("div");
+  const carouselClasses = ["carousel", "slide"];
+  carouselWrapperDiv.classList.add(...carouselClasses);
+  carouselWrapperDiv.setAttribute("data-bs-ride", "carousel");
+  carouselWrapperDiv.id = "multi-cards";
+
+  // Controls
+  const controlsButtonDiv = document.createElement("div");
+  controlsButtonDiv.classList.add("controls");
+
+  // prev button
+  const prevButtonLink = document.createElement("a");
+  const prevBtnClasses = ["btn-floating", "prev"];
+  prevButtonLink.classList.add(...prevBtnClasses);
+
+  prevButtonLink.setAttribute("data-bs-target", "#multi-cards");
+  prevButtonLink.setAttribute("data-bs-slide", "prev");
+
+  const prevButtonI = document.createElement("i");
+  const prevButtonClasses = ["fa", "fa-chevron-right"];
+  prevButtonI.classList.add(...prevButtonClasses);
+  prevButtonLink.appendChild(prevButtonI);
+  controlsButtonDiv.appendChild(prevButtonLink);
+
+  // next button
+  const nextButtonLink = document.createElement("a");
+  const nextBtnClasses = ["btn-floating", "next"];
+  nextButtonLink.classList.add(...nextBtnClasses);
+
+  nextButtonLink.setAttribute("data-bs-target", "#multi-cards");
+  nextButtonLink.setAttribute("data-bs-slide", "next");
+
+  const nextButtonI = document.createElement("i");
+  const nextButtonClasses = ["fa", "fa-chevron-left", "next"];
+  nextButtonI.classList.add(...nextButtonClasses);
+  nextButtonLink.appendChild(nextButtonI);
+  controlsButtonDiv.appendChild(nextButtonLink);
+
+  carouselWrapperDiv.appendChild(controlsButtonDiv);
+
+  // Slides
+  const carouselInnerDiv = document.createElement("div");
+  carouselInnerDiv.classList.add("carousel-inner");
+  carouselInnerDiv.setAttribute("role", "listbox");
+
+  let cardsInCarousel = 4;
+  // Carousel items
+  let carouselItemSize =
+    parseInt(courseSize / cardsInCarousel) + (courseSize % 2 == 1 ? 1 : 0);
+
+  // calc carouselItemSize depended on screen size()
+  if (screen.width <= 991) {
+    cardsInCarousel = 3;
+    carouselItemSize =
+      parseInt(courseSize / cardsInCarousel) + (courseSize % 2 == 1 ? 1 : 0);
+  }
+  // calc carouselItemSize depended on screen size()
+  if (screen.width <= 767) {
+    cardsInCarousel = 2;
+    carouselItemSize =
+      parseInt(courseSize / cardsInCarousel) + (courseSize % 2 == 1 ? 1 : 0);
+  }
+  // calc carouselItemSize depended on screen size()
+  if (screen.width <= 575) {
+    cardsInCarousel = 1;
+    carouselItemSize = parseInt(courseSize / cardsInCarousel);
+  }
+
+  var j = 0;
+  for (let i = 0; i < carouselItemSize; i++) {
+    const carouselItem = document.createElement("div");
+    carouselItem.classList.add("carousel-item");
+    if (i == 0) carouselItem.classList.add("active");
+    const row = document.createElement("div");
+    row.classList.add("row");
+    var cnt = 0;
+    while (cnt < cardsInCarousel && j < courseSize) {
+      const col = document.createElement("div");
+      const colClasses = ["col-lg-3", "col-md-4", "col-sm-6", "clearfix"];
+      col.classList.add(...colClasses);
+      const card = createCards(coursesArray[j]);
+      col.appendChild(card);
+      row.appendChild(col);
+      cnt++, j++;
+    }
+
+    carouselItem.appendChild(row);
+    carouselInnerDiv.appendChild(carouselItem);
+  }
+  carouselWrapperDiv.appendChild(carouselInnerDiv);
+  return carouselWrapperDiv;
+}
+
 /**
  * Function used to remove childs
- * @param {*} parentDiv 
+ * @param {*} parentDiv
  */
- function removeChilds(parentDiv) {
+function removeChilds(parentDiv) {
   while (parentDiv.firstChild) {
     parentDiv.removeChild(parentDiv.firstChild);
   }
