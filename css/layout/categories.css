@@ -1,5 +1,5 @@
 .main-content__categories {
-    margin-top: 10rem;
+    margin: 10rem 0;
 }
 .main-content__categories .main-content__categories-title {
     margin-bottom: 3rem;
@@ -8,6 +8,7 @@
 .main-content__categories .main-content__category-content {
     max-width: 370px;
     overflow: hidden;
+    margin-bottom: 1.5rem;
 }
 
 .main-content__categories .main-content__category-content figure {
