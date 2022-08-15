@@ -30,7 +30,7 @@ function createTabs(tabName) {
   li.classList.add("main-content__cources-item");
 
   const a = document.createElement("a");
-  a.href = `#${tabName}`;
+  a.href = `#${tabName.replace(/\s+/g, '-').toLowerCase()}`;
   a.innerHTML = tabName;
 
   li.appendChild(a);
@@ -42,6 +42,7 @@ const courseItem = document.querySelector(".main-content__cources-item");
 const tapLink = courseItem.querySelector("a");
 
 onTabClickOrDefaultTab(tapLink);
+
 
 // when tap clicked
 const element = document.querySelector(".main-content__cources-nav");
@@ -57,7 +58,6 @@ element.addEventListener(
  */
 async function onTabClickOrDefaultTab(tapName) {
   const coursesArray = Array.from(await coursesApi.loadCourses());
-
   if (courseSection.children.length == 0) {
     createCourseContainer(tapName.href.split("#")[1]);
   } else {
@@ -84,23 +84,50 @@ async function onTabClickOrDefaultTab(tapName) {
   courseContainer.prepend(
     createCourseDesc(
       tapName.href.split("#")[1],
-      tabsData[tapName.href.split("#")[1]].opportunities,
-      tabsData[tapName.href.split("#")[1]].desc
+      tabsData[tapName.href.split("#")[1].replace('-' , ' ' ).toLowerCase()].opportunities,
+      tabsData[tapName.href.split("#")[1].replace('-' , ' ').toLowerCase()].desc
     )
   );
   let coursesSize = 0;
   coursesArray.forEach((course) => {
-    if (course.category === tapName.href.split("#")[1]) {
+    if (course.category === tapName.href.split("#")[1].replace('-' , ' ').toLowerCase()) {
       coursesSize++;
     }
   });
   const relatedCourses = [];
   coursesArray.forEach((course) => {
-    if (course.category === tapName.href.split("#")[1]) {
+    if (course.category === tapName.href.split("#")[1].replace('-' , ' ').toLowerCase()) {
       relatedCourses.push(course);
     }
   });
   courseCards.appendChild(createCarousel(relatedCourses, coursesSize));
+  $(".owl-carousel").owlCarousel({
+    rtl: false,
+    loop: true,
+    margin: 10,
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:1,
+    smartSpeed:450,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      450: {
+        items: 2
+      },
+      576: {
+        items: 2,
+      },
+      767: {
+        items: 3,
+      },
+      1000: {
+        items: 5,
+      },
+    },
+  });
 }
 
 /**
@@ -117,7 +144,7 @@ function createCourseContainer(categoryName) {
 
   const courseCards = document.createElement("div");
   courseCards.classList.add("main-content__course-cards");
-  courseCards.classList.add("container");
+  courseCards.classList.add("container-fluid");
 
   courseParentDiv.appendChild(courseCards);
   courseSection.appendChild(courseParentDiv);
@@ -281,98 +308,19 @@ function createStars(starRate, students) {
 }
 
 function createCarousel(coursesArray, courseSize) {
+  const row = document.createElement("div");
+  row.classList.add("row");
   // Carousel Wrapper
   const carouselWrapperDiv = document.createElement("div");
-  const carouselClasses = ["carousel", "slide"];
+  const carouselClasses = ["owl-carousel", "courses-carousel", "owl-theme"];
   carouselWrapperDiv.classList.add(...carouselClasses);
-  carouselWrapperDiv.setAttribute("data-bs-ride", "carousel");
-  carouselWrapperDiv.id = "multi-cards";
 
-  // Controls
-  const controlsButtonDiv = document.createElement("div");
-  controlsButtonDiv.classList.add("controls");
-
-  // prev button
-  const prevButtonLink = document.createElement("a");
-  const prevBtnClasses = ["btn-floating", "prev"];
-  prevButtonLink.classList.add(...prevBtnClasses);
-
-  prevButtonLink.setAttribute("data-bs-target", "#multi-cards");
-  prevButtonLink.setAttribute("data-bs-slide", "prev");
-
-  const prevButtonI = document.createElement("i");
-  const prevButtonClasses = ["fa", "fa-chevron-right"];
-  prevButtonI.classList.add(...prevButtonClasses);
-  prevButtonLink.appendChild(prevButtonI);
-  controlsButtonDiv.appendChild(prevButtonLink);
-
-  // next button
-  const nextButtonLink = document.createElement("a");
-  const nextBtnClasses = ["btn-floating", "next"];
-  nextButtonLink.classList.add(...nextBtnClasses);
-
-  nextButtonLink.setAttribute("data-bs-target", "#multi-cards");
-  nextButtonLink.setAttribute("data-bs-slide", "next");
-
-  const nextButtonI = document.createElement("i");
-  const nextButtonClasses = ["fa", "fa-chevron-left", "next"];
-  nextButtonI.classList.add(...nextButtonClasses);
-  nextButtonLink.appendChild(nextButtonI);
-  controlsButtonDiv.appendChild(nextButtonLink);
-
-  carouselWrapperDiv.appendChild(controlsButtonDiv);
-
-  // Slides
-  const carouselInnerDiv = document.createElement("div");
-  carouselInnerDiv.classList.add("carousel-inner");
-  carouselInnerDiv.setAttribute("role", "listbox");
-
-  let cardsInCarousel = 4;
-  // Carousel items
-  let carouselItemSize =
-    parseInt(courseSize / cardsInCarousel) + (courseSize % 2 == 1 ? 1 : 0);
-
-  // calc carouselItemSize depended on screen size()
-  if (screen.width <= 991) {
-    cardsInCarousel = 3;
-    carouselItemSize =
-      parseInt(courseSize / cardsInCarousel) + (courseSize % 2 == 1 ? 1 : 0);
+  for (let i = 0; i < courseSize; i++) {
+    const card = createCards(coursesArray[i]);
+    carouselWrapperDiv.appendChild(card);
   }
-  // calc carouselItemSize depended on screen size()
-  if (screen.width <= 767) {
-    cardsInCarousel = 2;
-    carouselItemSize =
-      parseInt(courseSize / cardsInCarousel) + (courseSize % 2 == 1 ? 1 : 0);
-  }
-  // calc carouselItemSize depended on screen size()
-  if (screen.width <= 575) {
-    cardsInCarousel = 1;
-    carouselItemSize = parseInt(courseSize / cardsInCarousel);
-  }
-
-  var j = 0;
-  for (let i = 0; i < carouselItemSize; i++) {
-    const carouselItem = document.createElement("div");
-    carouselItem.classList.add("carousel-item");
-    if (i == 0) carouselItem.classList.add("active");
-    const row = document.createElement("div");
-    row.classList.add("row");
-    var cnt = 0;
-    while (cnt < cardsInCarousel && j < courseSize) {
-      const col = document.createElement("div");
-      const colClasses = ["col-lg-3", "col-md-4", "col-sm-6", "clearfix"];
-      col.classList.add(...colClasses);
-      const card = createCards(coursesArray[j]);
-      col.appendChild(card);
-      row.appendChild(col);
-      cnt++, j++;
-    }
-
-    carouselItem.appendChild(row);
-    carouselInnerDiv.appendChild(carouselItem);
-  }
-  carouselWrapperDiv.appendChild(carouselInnerDiv);
-  return carouselWrapperDiv;
+  row.appendChild(carouselWrapperDiv);
+  return row;
 }
 
 /**
