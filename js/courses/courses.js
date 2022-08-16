@@ -30,7 +30,8 @@ function createTabs(tabName) {
   li.classList.add("main-content__cources-item");
 
   const a = document.createElement("a");
-  a.href = `#${tabName}`;
+  // replace space with dash web development -> web-development 
+  a.href = `#${tabName.replace(/\s+/g, '-').toLowerCase()}`;
   a.innerHTML = tabName;
 
   li.appendChild(a);
@@ -43,6 +44,7 @@ const tapLink = courseItem.querySelector("a");
 
 onTabClickOrDefaultTab(tapLink);
 
+
 // when tap clicked
 const element = document.querySelector(".main-content__cources-nav");
 element.addEventListener(
@@ -51,14 +53,13 @@ element.addEventListener(
   false
 );
 
-
-/**
+/** 
+ * Main function
  * Function used to create content based on tab needed
- * @param {*} tapName 
+ * @param {*} tapName
  */
- async function onTabClickOrDefaultTab(tapName) {
+async function onTabClickOrDefaultTab(tapName) {
   const coursesArray = Array.from(await coursesApi.loadCourses());
-
   if (courseSection.children.length == 0) {
     createCourseContainer(tapName.href.split("#")[1]);
   } else {
@@ -84,15 +85,51 @@ element.addEventListener(
 
   courseContainer.prepend(
     createCourseDesc(
-      tapName.href.split("#")[1],
-      tabsData[tapName.href.split("#")[1]].opportunities,
-      tabsData[tapName.href.split("#")[1]].desc
+      // replace will make web-development -> web development
+      tapName.href.split("#")[1].replace('-' , ' ' ).toLowerCase(),
+      tabsData[tapName.href.split("#")[1].replace('-' , ' ' ).toLowerCase()].opportunities,
+      tabsData[tapName.href.split("#")[1].replace('-' , ' ').toLowerCase()].desc
     )
   );
+  let coursesSize = 0;
   coursesArray.forEach((course) => {
-    if (course.category === tapName.href.split("#")[1]) {
-      courseCards.appendChild(createCards(course));
+    if (course.category === tapName.href.split("#")[1].replace('-' , ' ').toLowerCase()) {
+      coursesSize++;
     }
+  });
+  const relatedCourses = [];
+  coursesArray.forEach((course) => {
+    if (course.category === tapName.href.split("#")[1].replace('-' , ' ').toLowerCase()) {
+      relatedCourses.push(course);
+    }
+  });
+  courseCards.appendChild(createCarousel(relatedCourses, coursesSize));
+  $(".owl-carousel").owlCarousel({
+    rtl: false,
+    loop: true,
+    margin: 10,
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:1,
+    smartSpeed:450,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      450: {
+        items: 2
+      },
+      576: {
+        items: 2,
+      },
+      767: {
+        items: 3,
+      },
+      1000: {
+        items: 5,
+      },
+    },
   });
 }
 
@@ -110,6 +147,7 @@ function createCourseContainer(categoryName) {
 
   const courseCards = document.createElement("div");
   courseCards.classList.add("main-content__course-cards");
+  courseCards.classList.add("container-fluid");
 
   courseParentDiv.appendChild(courseCards);
   courseSection.appendChild(courseParentDiv);
@@ -117,7 +155,7 @@ function createCourseContainer(categoryName) {
 
 /**
  * Creating Card
- * Function that create card it take object 
+ * Function that create card it take object
  * @param {image, title, auther, starRate, students, price } courseObject
  * @return Card Div
  */
@@ -222,7 +260,7 @@ function createCourseDesc(name, opportunities, desc) {
  */
 function createStars(starRate, students) {
   const totalStars = 5;
-  // if rate is 4.4 it will take the integer 4 
+  // if rate is 4.4 it will take the integer 4
   const currRateAsInteger = parseInt((starRate / 10) * 10);
 
   // create star container div
@@ -237,7 +275,7 @@ function createStars(starRate, students) {
   // fill all integer star with gold color
   for (let i = 0; i < currRateAsInteger; i++) {
     const starIcon = document.createElement("i");
-    const classes = ["fa-solid","fa-star"];
+    const classes = ["fa-solid", "fa-star"];
     starIcon.classList.add(...classes);
     starIconsSpan.append(starIcon);
   }
@@ -245,18 +283,18 @@ function createStars(starRate, students) {
   // fill the half star
   if (starRate - currRateAsInteger > 0) {
     const halfStarIcon = document.createElement("i");
-    const classes = ["fa-solid","fa-star-half-stroke"];
+    const classes = ["fa-solid", "fa-star-half-stroke"];
     halfStarIcon.classList.add(...classes);
     starIconsSpan.append(halfStarIcon);
   }
 
-  // fill unFill star with gray color 
+  // fill unFill star with gray color
   const unFillStar = parseInt(((totalStars - starRate) / 10) * 10);
-  
+
   for (let i = 0; i < unFillStar; i++) {
     // create icon star
     const starIcon = document.createElement("i");
-    const classes = ["fa-solid","fa-star", "fa-gray"];
+    const classes = ["fa-solid", "fa-star", "fa-gray"];
     starIcon.classList.add(...classes);
     starIconsSpan.append(starIcon);
   }
@@ -273,10 +311,32 @@ function createStars(starRate, students) {
 }
 
 /**
- * Function used to remove childs
- * @param {*} parentDiv 
+ * Function that create Carousel
+ * @param {Courses arrary that needed to create carousel over it} coursesArray 
+ * @param {courses size} courseSize 
+ * @returns row div with carousel items
  */
- function removeChilds(parentDiv) {
+function createCarousel(coursesArray, courseSize) {
+  const row = document.createElement("div");
+  row.classList.add("row");
+  // Carousel Wrapper
+  const carouselWrapperDiv = document.createElement("div");
+  const carouselClasses = ["owl-carousel", "courses-carousel", "owl-theme"];
+  carouselWrapperDiv.classList.add(...carouselClasses);
+
+  for (let i = 0; i < courseSize; i++) {
+    const card = createCards(coursesArray[i]);
+    carouselWrapperDiv.appendChild(card);
+  }
+  row.appendChild(carouselWrapperDiv);
+  return row;
+}
+
+/**
+ * Function used to remove childs
+ * @param {*} parentDiv
+ */
+function removeChilds(parentDiv) {
   while (parentDiv.firstChild) {
     parentDiv.removeChild(parentDiv.firstChild);
   }

@@ -1,19 +1,25 @@
 /*========================================================
   ============== importing Base css files ================
   ========================================================*/
-@import "./base/index.css";
+@import "./css/base/index.css";
 
 /*========================================================
   ============== importing Components css files ==========
   ========================================================*/
-  @import "./components/index.css";
+  @import "./css/components/index.css";
 
 /*========================================================
   ============== importing Layouts css files ==========
   ========================================================*/
-  @import "./layout/index.css";
+  @import "./css/layout/index.css";
 
 .main-content__head-title{
   margin-top: 5rem;
-  font-family: 'Playfair Display', serif;
+}
+.main-content__head-title h1 {
+  /* font-family: 'Playfair Display', serif; */
+  font-family: 'Gelasio', serif;
+}
+.main-content__head-title p {
+  margin-bottom: 5px !important;
 }

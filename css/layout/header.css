@@ -46,7 +46,7 @@ header {
 /* md && lg */
 @media (min-width:767px) and (max-width: 1199.98px){
    .header__text {
-    width: 30rem;
+    width: 34rem;
   }
 }
  .header__text > h1 {

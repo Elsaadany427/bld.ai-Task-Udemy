@@ -22,21 +22,29 @@ html::-webkit-scrollbar {
   -webkit-tap-highlight-color: transparent;
 }
 
+
+/* set body min height 100vh */
+body {
+  min-height: 100vh;
+}
+
+
 /* Links decoration */
 a {
   text-decoration: none !important;
   cursor: pointer;
 }
 
+a:hover {
+  color: inherit;
+}
+
 /* Remove default list styling */
 ul,
 ol {
   list-style: none;
-}
-
-/* set body min height 100vh */
-body {
-  min-height: 100vh;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 img,

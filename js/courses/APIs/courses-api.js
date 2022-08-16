@@ -12,7 +12,7 @@ export async function loadTabData() {
     return response;
 }
 
-
+// Load all courses category data from api
 export async function loadcategoryData() {
     const response = await (await fetch("http://localhost:3000/categories")).json();
     return response;

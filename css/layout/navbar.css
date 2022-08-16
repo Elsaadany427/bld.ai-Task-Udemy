@@ -28,14 +28,15 @@
 ======================================================================================================*/
 
 .navbar > .navbar__web-content {
-  padding: 0 2.4rem;
+  padding: 0 1.1rem;
   position: relative;
+  width: 100%;
 }
 
 /* sm down */
 @media (max-width : 767px) {
   .navbar > .navbar__web-content {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -43,10 +44,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-}
-
-.navbar__categories {
-  margin-left: 2rem !important;
 }
 
 .navbar__search-form {
@@ -142,6 +139,6 @@
 }
 
 .navbar__logo{
-  width: 9rem;
+  width: 9.5rem;
   display: inline-block;
 }

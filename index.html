@@ -5,18 +5,25 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./styles.css" />
+  <!-- Owl Carousel css file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Fontawsome css File -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <!-- Local css file -->
+  <link rel="stylesheet" href="./styles.css" />
   <title>Udemy</title>
 </head>
 
 <body>
   <div class="main-content-wrapper">
-    <!-- =============================================================================================================
-           ================================= Navbar in mobile and web ================================================
-           ===========================================================================================================-->
+    <!-- Navbar in mobile and web -->
     <div class="navbar flex-space-column">
       <!-- Navbar in mobile -->
       <div class="navbar__mobile flex-center-vert">
@@ -28,7 +35,7 @@
         </a>
       </div>
       <!-- Navbar in web browser -->
-      <nav class="navbar__web-content flex-middle">
+      <nav class="navbar__web-content d-flex align-items-center">
         <a href="#" class="navbar__logo">
           <img src="./assets/icons/logo-udemy.svg" alt="logo udemy in web" />
         </a>
@@ -39,9 +46,9 @@
             </a>
           </li>
           <li class="navbar__search-form">
-            <form class="flex-middle">
+            <form class="d-flex align-items-center">
               <input type="text" placeholder="Search for anything" />
-              <button class="btn btn-primary btn-height">Search</button>
+              <button class="btn btn-dark btn-height">Search</button>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path
                   d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
@@ -58,12 +65,12 @@
               <span> Teach on Udemy </span>
             </a>
           </li>
-          <li class="navbar__auth-buttons flex-middle">
+          <li class="navbar__auth-buttons d-flex align-items-center">
             <a href="#" class="navbar__btn--shopping">
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
             <button class="btn btn-secondry btn-height">Login</button>
-            <button class="btn btn-primary btn-height">Signup</button>
+            <button class="btn btn-dark btn-height">Signup</button>
             <button class="btn btn-secondry btn-height navbar__btn--language">
               <i class="fa-solid fa-globe"></i>
             </button>
@@ -72,11 +79,9 @@
       </nav>
     </div>
 
-    <!-- =============================================================================================================
-           ================================= Header ==================================================================
-           ===========================================================================================================-->
+    <!--Header -->
     <header>
-      <div class="header__background flex-middle">
+      <div class="header__background d-flex align-items-center">
         <img src="./assets/header/clock-png-25766.png" alt="header background" />
       </div>
       <div class="header__text flex-center-col">
@@ -85,13 +90,10 @@
       </div>
     </header>
 
-    <!-- =============================================================================================================
-           ================================= Main content ============================================================
-           ===========================================================================================================-->
-    <main class="main-content container">
-      <!-- =============================================================================================================
-           ================================= Main content -- Heading title =============================================
-           =============================================================================================================-->
+    <!-- Main content -->
+    <main class="main-content custom-container">
+
+      <!-- Main content -- Heading title -->
       <div class="main-content__head-title">
         <h1>A broad selection of courses</h1>
         <p>
@@ -100,20 +102,137 @@
         </p>
       </div>
 
-      <!-- =============================================================================================================
-           ================================= Main content -- courses ===================================================
-           =============================================================================================================-->
+      <!-- Main content -- courses generated from js -->
       <div class="main-content__cources-tab">
         <nav class="main-content__cources-nav">
           <ul class="main-content__cources-list">
           </ul>
         </nav>
-
         <section class="main-content__cources-content">
         </section>
       </div>
+
+      <!-- categories section -->
+      <section class="main-content__categories">
+
+        <div class="container">
+          <div class="main-content__categories-title">
+            <h2>
+              Top categories
+            </h2>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="main-content__category-content mx-auto">
+                <figure>
+                  <a href="#">
+                    <img src="./assets/categories/lohp-category-design-v2.jpg" alt="categories">
+                  </a>
+                </figure>
+                <figcaption>
+                  Design
+                </figcaption>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="main-content__category-content mx-auto">
+                <figure>
+                  <a href="#">
+                    <img src="./assets/categories/lohp-category-business-v2.jpg" alt="categories">
+                  </a>
+                </figure>
+                <figcaption>
+                  Development
+                </figcaption>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="main-content__category-content mx-auto">
+                <figure>
+                  <a href="#">
+                    <img src="./assets/categories/lohp-category-development-v2.jpg" alt="categories">
+                  </a>
+                </figure>
+                <figcaption>
+                  Marketing
+                </figcaption>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="main-content__category-content mx-auto">
+                <figure>
+                  <a href="#">
+                    <img src="./assets/categories/lohp-category-it-and-software-v2.jpg" alt="categories">
+                  </a>
+                </figure>
+                <figcaption>
+                  IT and Software
+                </figcaption>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="main-content__category-content mx-auto">
+                <figure>
+                  <a href="#">
+                    <img src="./assets/categories/lohp-category-marketing-v2.jpg" alt="categories">
+                  </a>
+                </figure>
+                <figcaption>
+                  Personal Development
+                </figcaption>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="main-content__category-content mx-auto">
+                <figure>
+                  <a href="#">
+                    <img src="./assets/categories/lohp-category-music-v2.jpg" alt="categories">
+                  </a>
+                </figure>
+                <figcaption>
+                  Business
+                </figcaption>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="main-content__category-content mx-auto">
+                <figure>
+                  <a href="#">
+                    <img src="./assets/categories/lohp-category-personal-development-v2.jpg" alt="categories">
+                  </a>
+                </figure>
+                <figcaption>
+                  Photography
+                </figcaption>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="main-content__category-content mx-auto">
+                <figure>
+                  <a href="#">
+                    <img src="./assets/categories/lohp-category-photography-v2.jpg" alt="categories">
+                  </a>
+                </figure>
+                <figcaption>
+                  Music
+                </figcaption>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
   </div>
-</body>
+
+  <!-- Jquery js file for carousel -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Owl Carousel library js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Main js file -->
   <script type="module" src="./main.js"></script>
+</body>
+
 </html>

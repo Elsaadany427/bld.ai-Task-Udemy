@@ -12,16 +12,22 @@
   line-height: 1.2;
   letter-spacing: -0.02rem;
   font-size: 1.4rem;
+  border-radius: 0 !important;
+}
+.btn:focus {
+  box-shadow:0 0 !important; 
 }
 .btn-secondry {
   color: var(--clr-primary);
   background-color: transparent;
   border: 1px solid var(--clr-primary);
 }
-.btn-primary {
-  background-color: var(--clr-primary);
-  color: var(--clr-secondry);
+.btn-secondry:hover{
+  background-color: var(--clr-btn-hover);
 }
 .btn-height {
   height: 4rem;
+}
+.btn-dark:hover {
+  background-color: var(--clr-primary);
 }
