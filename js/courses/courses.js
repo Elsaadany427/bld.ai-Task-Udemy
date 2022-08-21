@@ -30,7 +30,7 @@ function createTabs(tabName) {
   li.classList.add("main-content__cources-item");
 
   const a = document.createElement("a");
-  a.href = `#${tabName}`;
+  a.href = `#${tabName.replace(/\s+/g, '-').toLowerCase()}`;
   a.innerHTML = tabName;
 
   li.appendChild(a);
@@ -84,13 +84,13 @@ element.addEventListener(
 
   courseContainer.prepend(
     createCourseDesc(
-      tapName.href.split("#")[1],
-      tabsData[tapName.href.split("#")[1]].opportunities,
-      tabsData[tapName.href.split("#")[1]].desc
+      tapName.href.split("#")[1].replace('-' , ' ' ).toLowerCase(),
+      tabsData[tapName.href.split("#")[1].replace('-' , ' ' ).toLowerCase()].opportunities,
+      tabsData[tapName.href.split("#")[1].replace('-' , ' ' ).toLowerCase()].desc
     )
   );
   coursesArray.forEach((course) => {
-    if (course.category === tapName.href.split("#")[1]) {
+    if (course.category === tapName.href.split("#")[1].replace('-' , ' ' ).toLowerCase()) {
       courseCards.appendChild(createCards(course));
     }
   });
